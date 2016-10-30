@@ -1,0 +1,329 @@
+/*-----------------------------------------------------------------------------------
+1.Utilitaires
+
+2.Générales
+
+3.Typographie
+
+4.Structure de base
+  3.1.Navigation
+  3.2.Flexbox
+  3.3.Portfolio
+
+4.Styles et couleurs
+  3.1.Bouttons
+  3.2.Formulaire de contact
+
+5.Media Queries
+  5.1.Tablette (paysage)
+  5.2.Tablette (portrait)
+-----------------------------------------------------------------------------------*/
+   
+/* ******************************************************************** */
+/* UTILITAIRES */
+/* ******************************************************************** */
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i';
+
+
+/* ******************************************************************** */
+/* GENERALES */
+/* ******************************************************************** */
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+/*    overflow-x : hidden;*/
+    font-family: 'Source Sans Pro';
+    background-color:  #e5e3e3;
+}
+
+.wrapper {width: 980px;
+margin: 0 auto;}
+
+
+.claerfix:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+/* ******************************************************************** */
+/* STRUCTURE DE BASE */
+/* ******************************************************************** */
+
+.navigation,
+.header_icons ul {
+    display: flex;
+}
+
+
+/* ********** header ********** */
+header img {
+    position: absolute;
+    top:0px;
+    right:0px;
+    margin-right: 5vw;
+    height: 800px;
+    min-height: 700px;
+}
+
+.header_texte {
+    position: relative;
+    z-index: 1;
+    left: 5vw;
+    top: 150px;
+}
+
+header,
+.contact {
+    background-color: #4b4b4b;
+}
+
+header {
+    height: 800px;
+    width: 100vw;
+}
+
+.header_icons ul{
+    height: 50px;
+    margin-top: 50px;
+    align-items: center;
+    font-size: 36pt;
+    justify-content: center;
+}
+
+.header_icons ul li {margin-right: 20px;}
+
+/* ********** navigation ********** */
+.navigation {
+    z-index: 2;
+    position: fixed;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    text-transform: uppercase;
+    list-style: none;
+    background-color:  #e5e3e3;
+    opacity: 0.8;
+    
+}
+
+.navigation li a{
+    margin-right: 50px;
+    color: #4b4b4b;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.navigation li a:hover {
+    font-weight: 500;
+}
+
+
+
+/* ********** catégories ********** */
+.graphisme,
+.webdesign,
+.video {
+    width: 980px;
+    height: 360px;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.graphisme {
+    background-color: #e7e24f;
+    text-align: right;
+    display: flex;
+}
+
+.webdesign {
+    background-color: #4b4b4b;
+    display: flex;
+}
+
+.video {
+    background-color: #5983e1;
+    text-align: right;
+    display: flex;
+}
+
+
+.graphisme_image {
+    position: relative;
+    height: 400px;
+    bottom: 70px;
+    margin-left: -20px;
+}
+
+.video_image {
+    position: relative;
+    height: 400px;
+    bottom: 70px;
+}
+
+.webdesign_image {
+    position: relative;
+    height: 400px;
+    bottom: 70px;
+}
+
+
+.diplomes {
+    height: 400px;
+    width: 100vw;
+    background-color: #4b4b4b;
+    padding: 50px;
+    margin: 50px 0 50px 0;
+}
+
+.diplomes_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* ********** formulaire de contact ********* */
+
+.contact {
+    margin-top: 50px;
+}
+
+.contact_flex {
+    display: flex;
+    padding: 50px 0 50px 0;
+}
+
+.contact_form {
+    width: 520px;
+    margin: 0 auto;
+}
+    
+input,
+textarea {
+    margin: 10px;
+    width: 520px;
+    height: 50px;
+    background-color:  #e5e3e3;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'Source Sans Pro';
+}
+
+textarea {
+    height: 150px;
+}
+
+.bouton {
+    width: 150px;
+    height: 50px;
+    background-color: #e7e24f;
+    color: #4b4b4b;
+}
+
+/* ******************************************************************** */
+/* TYPO */
+/* ******************************************************************** */
+
+.header_titre-vert,
+.header_titre-bleu,
+.section_titre {
+    z-index: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+/*    text-shadow: 0px 2px 5px #000000;*/
+}
+
+.header_titre-vert {
+    font-size: 12em;
+    color: #e7e24f;
+}
+
+.header_titre-bleu {
+    font-size: 10em;
+    color :#5983e1;
+}
+
+.texte-gris { color: #4b4b4b;}
+.texte-blanc {color:  #e5e3e3;}
+.texte-vert {color: #e7e24f;}
+
+.section_titre{font-size: 5em;}
+
+.sous_titre,
+.bouton,
+input,
+textarea {
+    font-weight: 300;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+.diplomes p {
+    font-weight: 300;
+    width: 265px;
+}
+
+.diplomes_flex_item i {
+    font-size : 2em;
+}
+
+.graphisme_skill_list,
+.webdesign_skill_list,
+.video_skill_list {
+    text-align: left;
+    margin: 30px;
+    list-style: circle;
+    font-size: 1.2em;
+    font-weight:300;
+    line-height: 1.2em;
+}
+
+.graphisme_skill_list { margin-left: 50px;}
+.video_skill_list { margin-left: 75px;}
+
+.video_image {margin-left: -40px;}
+.video_texte {margin-left: -50px;}
+
+
+
+#mentions-btn {
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+#mentions-btn:hover  {
+    cursor: pointer;
+}
+
+#mentions-hidden {
+    display: none;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #e5e3e3;
+    font-weight: 300;
+    font-size: 0.85em;
+}
+
+#mentions-hidden h3 {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#mentions-hidden h3:last-of-type {
+    margin-top: 10px;
+}
+
+
+
